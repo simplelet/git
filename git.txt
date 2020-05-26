@@ -1,0 +1,40 @@
+git checkout -b branch-name <sha>
+
+git add -u <==> git add –update   提交所有被删除和修改的文件到数据暂存区
+git add .   提交所有修改的和新建的数据暂存区
+git add -A <==>git add –all  提交所有被删除、被替换、被修改和新增的文件到数据暂存区
+git add file1 file2 file3 提交多个指定文件
+
+git commit -m “message”
+git push --set-upstream origin dev
+
+
+将dev分支merge到master
+git checkout master
+git merge dev
+
+删除dev分支
+git branch -d dev
+
+
+修改上次commit的comment
+git commit --amend -m "Your new commit message"
+
+回滚最近一次 commit
+git reset --soft HEAD^
+
+
+
+1.从 master 分支切出一个 dev 分支：
+(master) git checkout -b dev
+2.这时候有代码改动合并到了master分支，此时master已经领先于dev分支了
+3.同步master分支的改动的两种方案：
+(1)git:(dev) git rebase master
+(2)git:(dev) git merge master
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/simplelet/xxxx.git
+git push -u origin master
