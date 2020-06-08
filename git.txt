@@ -31,8 +31,15 @@ git branch -d dev
 修改上次commit的comment
 git commit --amend -m "Your new commit message"
 
-回滚最近一次 commit
-git reset --soft HEAD^
+git stash
+git stash list 列表
+git stash apply 恢复，恢复后，stash内容并不删除，你需要使用命令git stash drop来删除
+git stash pop 恢复的同时把stash内容也删除了
+
+
+远程仓库：
+远程库的默认名称是origin
+git push origin master 推送到远程仓库master分支
 
 
 
