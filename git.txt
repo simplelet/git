@@ -8,6 +8,17 @@ git add file1 file2 file3 提交多个指定文件
 git commit -m “message”
 git push --set-upstream origin dev
 
+版本回退：
+git reset --hard HEAD^  git reset --hard HEAD~100
+git reset --hard 版本号
+
+查看日志：
+git log 
+git log --pretty=oneline
+git reflog
+
+丢弃工作区的修改:
+git checkout -- file 
 
 将dev分支merge到master
 git checkout master
